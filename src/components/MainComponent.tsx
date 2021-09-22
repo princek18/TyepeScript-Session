@@ -16,7 +16,7 @@ const MainComponent: React.FC<props> = ({Posts, dispatch}) => {
             <h1>This is the Main Component!</h1>
             <button onClick={() => dispatch(fetchActionCreator())}>Fetch</button>
             {Posts.map((post) => {
-                return <div onClick={() => dispatch(deleteActionCreator(post.id))} key={post.id}>{post.title}</div>
+                return <div style={{cursor:"pointer"}} onClick={() => dispatch(deleteActionCreator(post.id))} key={post.id}>{post.title}</div>
             })}
         </div>
     )
